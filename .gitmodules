@@ -1,0 +1,51 @@
+[submodule "external/roles/uclalib_role_epel"]
+	path = external/roles/uclalib_role_epel
+	url = git@github.com:UCLALibrary/uclalib_role_epel.git
+[submodule "external/roles/uclalib_role_rhel7repos"]
+	path = external/roles/uclalib_role_rhel7repos
+	url = git@github.com:curationexperts/uclalib_role_rhel7repos.git
+[submodule "external/roles/uclalib_role_samvera_basepackages"]
+	path = external/roles/uclalib_role_samvera_basepackages
+	url = git@github.com:UCLALibrary/ansible_uclalib_role_samvera_basepackages.git
+[submodule "external/roles/uclalib_role_java"]
+	path = external/roles/uclalib_role_java
+	url = git@github.com:curationexperts/uclalib_role_java
+[submodule "external/roles/uclalib_role_pip"]
+	path = external/roles/uclalib_role_pip
+	url = git@github.com:UCLALibrary/ansible_uclalib_role_pip.git
+[submodule "external/roles/uclalib_role_imagemagick"]
+	path = external/roles/uclalib_role_imagemagick
+	url = git@github.com:UCLALibrary/ansible_uclalib_role_imagemagick.git
+[submodule "external/roles/uclalib_role_libreoffice"]
+	path = external/roles/uclalib_role_libreoffice
+	url = git@github.com:UCLALibrary/ansible_uclalib_role_libreoffice.git
+[submodule "external/roles/uclalib_role_ffmpeg"]
+	path = external/roles/uclalib_role_ffmpeg
+	url = git@github.com:UCLALibrary/uclalib_role_ffmpeg.git
+[submodule "external/roles/uclalib_role_fits"]
+	path = external/roles/uclalib_role_fits
+	url = git@github.com:UCLALibrary/ansible_uclalib_role_fits.git
+[submodule "external/roles/uclalib_role_apache"]
+	path = external/roles/uclalib_role_apache
+	url = git@github.com:UCLALibrary/ansible_uclalib_role_apache.git
+[submodule "external/roles/uclalib_role_passenger"]
+	path = external/roles/uclalib_role_passenger
+	url = git@github.com:UCLALibrary/ansible_uclalib_role_passenger.git
+[submodule "external/roles/uclalib_role_nodejs"]
+	path = external/roles/uclalib_role_nodejs
+	url = git@github.com:UCLALibrary/ansible_uclalib_role_nodejs.git
+[submodule "external/roles/uclalib_role_yarn"]
+	path = external/roles/uclalib_role_yarn
+	url = git@github.com:UCLALibrary/ansible_uclalib_role_yarn.git
+[submodule "external/roles/uclalib_role_redis"]
+	path = external/roles/uclalib_role_redis
+	url = git@github.com:UCLALibrary/ansible_uclalib_role_redis.git
+[submodule "external/roles/uclalib_role_fedora4"]
+	path = external/roles/uclalib_role_fedora4
+	url = git@github.com:UCLALibrary/ansible_uclalib_role_fedora4.git
+[submodule "external/roles/uclalib_role_solr7"]
+	path = external/roles/uclalib_role_solr7
+	url = git@github.com:UCLALibrary/ansible_uclalib_role_solr7
+[submodule "external/roles/uclalib_role_tomcat"]
+	path = external/roles/uclalib_role_tomcat
+	url = git@github.com:UCLALibrary/ansible_uclalib_role_tomcat.git
