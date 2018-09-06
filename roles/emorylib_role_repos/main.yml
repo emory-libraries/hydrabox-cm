@@ -1,0 +1,21 @@
+---
+- name: Check if python cert is enabled
+
+
+- name: Disable python cert 
+
+- name: Unregister from RHN
+  rhn_register:
+    state: absent
+    username: "{{ rhn_user }}"
+    password: "{{ rhn_pass }}"
+
+- name: Register box with repos enabled
+  rhn_register: 
+    state: present
+    username: "{{ rhn_user }}"
+    password: "{{ rhn_pass }}"
+    channels: "{{ rhn_channels }}"
+    profilename: "{{ rhn_profilename }}"
+
+- name: Change python cert settings back to OG

@@ -1,0 +1,55 @@
+---
+# Define the major version of Apache Tomcat to download (e.g. 6, 7, 8)
+tomcat_major_version: 7
+
+# Define the version of Apache Tomcat to download
+# Will obtain from this URL:
+# http://archive.apache.org/dist/tomcat/tomcat-{{ tomcat_major_version }}/v{{ tomcat_version }}/bin/apache-tomcat-{{ tomcat_version }}.zip
+tomcat_version: 7.0.67
+
+# This is a list defining all of the Tomcat apps to be created
+# The list provided her will be used for creating the following:
+# 	1. App directories
+#	2. Dedicated App Users/Groups
+#	3. Init scripts
+#	4. Enviornment variable files
+#
+#	app_name is the Tomcat applicaiton's app_name
+#	shut_port is the Tomcat applicaiton's shutdown port
+#	conn_port is the Tomcat application's connector port
+#
+
+tomcat_applications:
+  - app_name: app1
+    shut_port: 8006
+    conn_port: 8081
+    rproxy_path: path1
+  - app_name: app2
+    shut_port: 8007
+    conn_port: 8082
+    rproxy_path: path2
+
+# Server name to use in the Apache HTTPD reverse proxy vhost file
+tomcat_server_name: "{{ ansible_fqdn }}"
+
+# Tomcat conf sub-directories that should be copied from CATALINA_HOME to CATALINA_BASE
+tomcat_subdirs: [ conf, logs, temp, webapps, work ]
+
+# Tomcat default webapps that should be removed
+default_webapps: [ docs, examples, host-manager, manager, ROOT ]
+
+# LVM Filesystem variables
+vg_name: vg_apps
+
+lv_size: 5G
+
+lvm_base_path: "/dev/mapper/vg_apps"
+
+use_lvm: yes
+
+# No default values for apache_vhost_ssl
+# Defined here in comments to show how to use in a playbook
+#apache_vhost_ssl:
+# cert_file_path:  /path/to/certificate.crt
+# cert_key_file_path: /path/to/certificate.key
+# cert_chain_file_path: /path/to/certificate_chain.crt
