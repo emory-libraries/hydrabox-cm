@@ -40,4 +40,4 @@ solr_java_max_mem: 2048m
 # Use "default" type to include standard solrconfig
 solr_cores:
   - ident: "core1"
-    type: "default"
+    type: "hyrax"

@@ -10,28 +10,32 @@
 
 - name: Disable cert checking in python
   ini_file:
-    name: /etc/python/cert-verification.cfg
+    path: /etc/python/cert-verification.cfg
     section: https
     option: verify
     value: disable
+
+- debug:
+    var: rhn_username
 
 - name: Unregister from RHN
   rhn_register:
     state: absent
     username: "{{ rhn_username }}"
     password: "{{ rhn_password }}"
+  ignore_errors: yes
 
 - name: Register with needed channels
-    rhn_register:
-      state: present
-      username: "{{ rhn_username }}" 
-      password: "{{ rhn_password }}"
-      channels: "{{ rhn_channels }}"  
-      profilename: "{{ rhn_profilename }}"
+  rhn_register:
+    state: present
+    username: "{{ rhn_username }}" 
+    password: "{{ rhn_password }}"
+    channels: "{{ rhn_channels }}"  
+    profilename: "{{ rhn_profilename }}"
 
 - name: Re-enable cert checking in python
   ini_file:
-    name: /etc/python/cert-verification.cfg
+    path: /etc/python/cert-verification.cfg
     section: https
     option: verify
     value: platform_default
