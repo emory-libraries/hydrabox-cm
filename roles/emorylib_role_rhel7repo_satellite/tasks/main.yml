@@ -1,0 +1,37 @@
+---
+# tasks file for emorylib_role_rhel7repo_satellite
+- name: Set relative path for calling role
+  set_fact:
+    relative_role_path: "{{ role_path }}"
+
+- name: Import local project enviroment vars
+  include_role: 
+    name: dce_role_project_env
+
+- name: Disable cert checking in python
+  ini_file:
+    name: /etc/python/cert-verification.cfg
+    section: https
+    option: verify
+    value: disable
+
+- name: Unregister from RHN
+  rhn_register:
+    state: absent
+    username: "{{ rhn_username }}"
+    password: "{{ rhn_password }}"
+
+- name: Register with needed channels
+    rhn_register:
+      state: present
+      username: "{{ rhn_username }}" 
+      password: "{{ rhn_password }}"
+      channels: "{{ rhn_channels }}"  
+      profilename: "{{ rhn_profilename }}"
+
+- name: Re-enable cert checking in python
+  ini_file:
+    name: /etc/python/cert-verification.cfg
+    section: https
+    option: verify
+    value: platform_default
