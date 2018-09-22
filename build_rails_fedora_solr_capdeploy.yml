@@ -3,8 +3,8 @@
   become: yes
   #user: ec2-user
   vars:
-    project_name: "dlp-sandbox"
-    env_name: "hydrabox"
+#    project_name: "dlp-sandbox"
+#    env_name: "hydrabox"
     tomcat_applications:
       - app_name: fedora
         shut_port: 8008
@@ -37,7 +37,7 @@
 #    - { role: uclalib_role_yarn }
 #    - { role: dce_role_end_play }
 
-#    - { role: emorylib_role_local_mysqldb }
+     - { role: emorylib_role_local_mysqldb }
 #    - { role: uclalib_role_tomcat }
 #    - { role: uclalib_role_fedora4, fedora_version: '4.7.5' }
 #    - { role: uclalib_role_solr7, solr_fqdn: "solr-hydrabox.library.emory.edu" }
