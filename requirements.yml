@@ -1,5 +1,4 @@
 # UCLA Roles for Samvera Cap Deploy
-#- src: https://github.com/UCLALibrary/uclalib_role_samvera_capdeploy
 #- src: https://github.com/UCLALibrary/uclalib_role_rhel7repos #Use forked version
 #- src: https://github.com/UCLALibrary/uclalib_role_epel
 #- src: https://github.com/UCLALibrary/uclalib_role_samvera_basepackages
@@ -20,14 +19,16 @@
 #- src: https://github.com/UCLALibrary/uclalib_role_fedora4
 
 # Forked from DCE repo
+#- src: https://github.com/curationexperts/uclalib_role_samvera_capdeploy
+#  version: add-geonames-honeybadger
 #- src: https://github.com/curationexperts/uclalib_role_java
 #- src: https://github.com/UCLALibrary/uclalib_role_ruby #Use custom emory ruby role
-- src: https://github.com/emory-libraries/emorylib_role_rhel7repo_satellite
+#- src: https://github.com/emory-libraries/emorylib_role_rhel7repo_satellite
 #- src: https://github.com/emory-libraries/emorylib_role_install_ruby_scl
-#- src: https://github.com/emory-libraries/emorylib_role_local_mysqldb
+- src: https://github.com/emory-libraries/emorylib_role_local_mysqldb
 
 # Utility Roles
-#- src: https://github.com/curationexperts/dce_role_project_env
+- src: https://github.com/curationexperts/dce_role_project_env
 #- src: https://github.com/curationexperts/dce_role_selinux_reboot
 #- src: https://github.com/curationexperts/dce_role_wait_for_gatherfacts
 #- src: https://github.com/curationexperts/dce_role_end_play
