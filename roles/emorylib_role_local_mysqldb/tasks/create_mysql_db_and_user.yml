@@ -3,27 +3,11 @@
     name: "{{ item.value.name }}"
     state: "{{ db_state }}"
   loop: "{{ db_dict|dict2items }}"
-#  with_dict: "{{ db_dict }}"
-  #loop: "{{ query('dict', db_dict) }}"
- # with_subelements: "{{ db_dict }}"
 
-
-- name: Create MySQL users and grant priv for base users
+- name: Create MySQL users and grant priv
   mysql_user:
     name: "{{ item.value.user }}"
-    host: 127.0.0.1
     password: "{{ item.value.pass }}"
     priv: '{{ item.value.name }}.*:ALL'
     state: "{{ db_user_state }}"
   loop: "{{ db_dict|dict2items }}"
-
-
-- name: Create mySQL users and grant privs for the deploying users
-  mysql_user:
-    name: "{{ item }}"
-    host: 127.0.0.1
-    password: "{{ db_dict.rails.pass }}"
-    priv: '{{ db_dict.rails.name }}.*:ALL'
-    state: "{{ db_user_state }}"
-  loop: [deploy, ansible]
-

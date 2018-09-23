@@ -1,4 +1,10 @@
 ---
 # defaults file for emorylib_role_local_mysqldb
-db_state: present
-db_user_state: present
+# Needed for role logic
+rails_db_name: ""
+rails_db_user: ""
+rails_db_pass: ""
+
+fedora_db_name: ""
+fedora_db_user: ""
+fedora_db_password: ""

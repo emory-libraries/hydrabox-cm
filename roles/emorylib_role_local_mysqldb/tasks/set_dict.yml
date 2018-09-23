@@ -1,4 +1,4 @@
-- name: Create dict of needed mysql databases
+- name: Set rails db dictionary
   set_fact:
     db_dict:
       rails:
