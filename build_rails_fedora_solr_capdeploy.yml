@@ -3,8 +3,8 @@
   become: yes
   #user: ec2-user
   vars:
-#    project_name: "dlp-sandbox"
-#    env_name: "hydrabox"
+    project_name: "dlp-sandbox-2"
+    env_name: "hydrabox"
     tomcat_applications:
       - app_name: fedora
         shut_port: 8008
